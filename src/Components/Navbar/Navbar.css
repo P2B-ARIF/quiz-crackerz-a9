@@ -1,0 +1,20 @@
+nav {
+  background-color: #d0e9ff;
+  padding: 1rem 0;
+}
+.logo-sec h2{
+    letter-spacing: .2rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .menu-sec a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0 1rem;
+  color: #000140;
+}
