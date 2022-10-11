@@ -39,7 +39,9 @@
     align-items: center;
     font-family: 'Noto Sans Mono', monospace;
 }
-#singleQuestion:hover{}
+#singleQuestion:hover{
+    
+}
 
 .labelText{
     /* color: purple; */
