@@ -2,14 +2,13 @@ import React from 'react';
 import { useParams, useLoaderData } from 'react-router-dom';
 import Questions from '../Questions/Questions';
 import './Quiz.css';
-import { ToastContainer, toast } from 'react-toastify';
 import Footer from '../Footer/Footer';
 
 
 const Quiz = () => {
     const quizId = useParams();
     const { data } = useLoaderData()
-    const { total, id, name, logo, questions } = data;
+    const { id, name, questions } = data;
     // console.log(data);
 
     return (
@@ -23,7 +22,7 @@ const Quiz = () => {
                     />)
                 }
             </div>
-            <Footer/>
+            <Footer />
         </>
     );
 };

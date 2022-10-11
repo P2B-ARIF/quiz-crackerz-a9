@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Hero.css'
 import { useState } from 'react';
-import { ForwardIcon ,BackwardIcon } from '@heroicons/react/24/solid';
+import { ForwardIcon, BackwardIcon } from '@heroicons/react/24/solid';
 
 
 
@@ -43,30 +43,28 @@ const Hero = () => {
         setFormat2(formats2[count])
     }
 
-
-
     return (
         <>
-        <h1 className='dev-text'><ForwardIcon className='forward'/> Focus on Web-Development <BackwardIcon className='forward'/> </h1>
-        <section className='hero'>
-            <div className="first">
-                <div className='hero-img-1'>
-                    <img src={require(`../../Images/${format}`)} alt='pic' />
+            <h1 className='dev-text'><ForwardIcon className='forward' /> Focus on Web-Development <BackwardIcon className='forward' /> </h1>
+            <section className='hero'>
+                <div className="first">
+                    <div className='hero-img-1'>
+                        <img src={require(`../../Images/${format}`)} alt='pic' />
+                    </div>
+                    <div className="btn1">
+                        <button className='plus' onClick={next}> + </button>
+                    </div>
                 </div>
-                <div className="btn1">
-                    <button className='plus' onClick={next}> + </button>
-                </div>
-            </div>
-            <div className="second">
-                <div className='hero-img-2'>
-                    <img src={require(`../../Images/${format2}`)} alt='pic' />
-                </div>
-                <div className="btn2">
-                    <button className='minus' onClick={pre}> - </button>
+                <div className="second">
+                    <div className='hero-img-2'>
+                        <img src={require(`../../Images/${format2}`)} alt='pic' />
+                    </div>
+                    <div className="btn2">
+                        <button className='minus' onClick={pre}> - </button>
 
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
         </>
     );
 };

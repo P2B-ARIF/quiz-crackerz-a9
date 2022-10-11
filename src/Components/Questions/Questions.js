@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react';
 import './Questions.css'
 import { EyeIcon } from '@heroicons/react/24/solid';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Swal } from 'sweetalert2';
 
 
 
@@ -30,39 +28,39 @@ const Questions = ({ questions }) => {
             progress: undefined,
             theme: "light",
         });
-}
-const eyePower = () => {
-    toast("Answer Is: " + correctAnswer, {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-    });
-}
+    }
+    const eyePower = () => {
+        toast("Answer Is: " + correctAnswer, {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+    }
 
-return (
-    <div className='questionGroup' >
-        <ToastContainer />
+    return (
+        <div className='questionGroup' >
+            <ToastContainer />
 
-        <p>{question}</p>
-        <EyeIcon onClick={eyePower} className='eye' />
-        <div className='question'>
-            {
-                options.map(option => {
+            <p>{question}</p>
+            <EyeIcon onClick={eyePower} className='eye' />
+            <div className='question'>
+                {
+                    options.map(option => {
 
-                    return <div>
-                        <label id='singleQuestion' key={id}  onClick={(e) => currect(option, e.target)} >{option}</label>
-                    </div>
-                })
-            }
+                        return <div>
+                            <label id='singleQuestion' key={id} onClick={(e) => currect(option, e.target)} >{option}</label>
+                        </div>
+                    })
+                }
 
+            </div>
         </div>
-    </div>
-);
+    );
 };
 
 export default Questions;
