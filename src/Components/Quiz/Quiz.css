@@ -1,7 +1,9 @@
-.quiz{
-    padding: 2rem 0;
+.quiz {
+  padding: 2rem 0;
 }
 
-.quiz h2{
-    text-align: center;
+.quiz h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #045455;
 }

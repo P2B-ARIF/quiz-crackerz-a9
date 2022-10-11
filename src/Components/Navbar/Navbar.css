@@ -1,6 +1,7 @@
 nav {
   background-color: #10283d;
   padding: 1rem 0;
+  box-shadow: #07075a80 0px 7px 29px 0px;
   
 }
 .logo-sec {
@@ -112,6 +113,13 @@ nav {
 }
 
 @media (min-width: 992px) {
+  
+.navbar {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  /* position: relative; */
+}
 }
 
 @media (min-width: 1200px) {

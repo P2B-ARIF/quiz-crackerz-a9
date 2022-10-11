@@ -5,7 +5,7 @@ import { ArrowLongRightIcon, } from '@heroicons/react/24/solid'
 
 const QuizBank = () => {
     const { data } = useLoaderData()
-    console.log(data);
+    // console.log(data);
     return (
         <section className='container'>
             <h1 className='topic'>ALL TOPIC HERE...!</h1>
