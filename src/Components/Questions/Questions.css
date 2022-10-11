@@ -9,7 +9,6 @@
     border-radius: .5rem;
     position: relative;
     
-    
 }
 .questionGroup p{
     width: 65%;
@@ -50,6 +49,8 @@
     background-color: #97ff99 !important;
 
 }
+
+
 /* .singleQuestion label {
 } */
 

@@ -2,19 +2,30 @@ import './Questions.css'
 import { EyeIcon } from '@heroicons/react/24/solid';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useState } from 'react';
 
 
 
-const Questions = ({ questions }) => {
+const Questions = ({ questions, extraWorksTrue , extraWorksFalse}) => {
+   
     const { options, id, question, correctAnswer } = questions
+
 
     const currect = (option, e) => {
         if (correctAnswer === option) {
             ansBoot(true)
+            extraWorksTrue(true)
+
+            // setPlus(plus + 1)
             e.setAttribute('class', 'labelText');
 
         } else {
+            extraWorksTrue(false)
+
+            // extraWorksFalse(false)
+
             ansBoot(false)
+            // setMinus(minus + 1)
         }
     }
     const ansBoot = (props) => {
@@ -45,15 +56,19 @@ const Questions = ({ questions }) => {
     return (
         <div className='questionGroup' >
             <ToastContainer />
-
             <p>{question}</p>
+
             <EyeIcon onClick={eyePower} className='eye' />
             <div className='question'>
                 {
                     options.map(option => {
 
                         return <div>
-                            <label id='singleQuestion' key={id} onClick={(e) => currect(option, e.target)} >{option}</label>
+                            <label id='singleQuestion' key={id} onClick={(e) => {
+                                currect(option, e.target)
+                                extraWorksTrue()
+                                extraWorksFalse(false)
+                            }} >{option}</label>
                         </div>
                     })
                 }

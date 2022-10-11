@@ -1,5 +1,6 @@
 .quiz {
   padding: 2rem 0;
+  position: relative;
 }
 
 .quiz h2 {
@@ -7,3 +8,33 @@
   font-size: 2rem;
   color: #045455;
 }
+.extraWork{
+position: fixed;
+right:  3rem;
+top:  5rem;
+/* display: flex; */
+
+}
+.extraWork .count-plus{
+  font-size: 10rem;
+  font-weight: bold;
+  color: #045455;
+  line-height: .7;
+}
+.extraWork .count-minus{
+  font-size: 10rem;
+  font-weight: bold;
+  color: darkred;
+  line-height: .7;
+}
+.extraWork .c-plus{
+  text-align: center;
+}
+.extraWork .c-minus{
+  text-align: center;
+}
+
+/* 
+count-plus
+count-minus
+ */
