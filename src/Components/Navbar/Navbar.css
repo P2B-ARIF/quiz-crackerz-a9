@@ -1,12 +1,14 @@
 nav {
-  background-color: #d0e9ff;
+  background-color: #10283d;
   padding: 1rem 0;
+  
 }
 .logo-sec {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 80%;
+  color:  white;
   margin: 0 auto;
 }
 .logo-sec .bars3Icon {
@@ -37,7 +39,9 @@ nav {
   text-transform: uppercase;
   font-weight: bold;
   margin: 5px 1rem;
-  color: #000140;
+  /* color: #000140; */
+  color: white;
+  letter-spacing: .2rem;
   position: relative;
   text-align: center;
 }
