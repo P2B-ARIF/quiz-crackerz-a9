@@ -11,18 +11,9 @@ const Quiz = () => {
     const { total, id, name, logo, questions } = data;
     console.log(data);
 
-    // const eyePower = () => {
-    //     toast("Wow so easy!");
-    //     // console.log('hi', correctAnswer);
-    // }
-
-    // console.log(quizId.quiz);
     return (
         <>
-            {/* <ToastContainer /> */}
-
-            <div  className='quiz'>
-
+            <div className='quiz'>
                 <h2 >Quiz of {name}</h2>
                 {
                     questions.map(question => <Questions

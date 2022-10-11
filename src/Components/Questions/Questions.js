@@ -27,9 +27,7 @@ const Questions = ({ questions }) => {
             draggable: true,
             progress: undefined,
             theme: "light",
-        }); 
-
-
+        });
     }
 
 
@@ -44,8 +42,10 @@ const Questions = ({ questions }) => {
                     options.map(option => {
 
                         return <div className='singleQuestion' key={id}>
-                            {/* <input type="checkbox" name="" /> */}
-                            <label onClick={(e) => currect(option, e.target)} >{option}</label>
+                            {/* <input type="checkbox" name="" />
+                            <label onClick={(e) => currect(option, e.target)} >{option}</label> */}
+                                <input id={'input-1'}  type="checkbox" name="" />
+                                <label htmlFor={`input-1`} onClick={(e) => currect(option, e.target)} >{option}</label>
 
                         </div>
                     })
