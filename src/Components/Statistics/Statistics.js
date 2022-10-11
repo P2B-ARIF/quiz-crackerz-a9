@@ -11,8 +11,10 @@ const Statistics = () => {
     // console.log(total.data);
 
     return (
+        <div className="statistic">
+        <h1>MONTHLY STATUS OF QUICK-TECH</h1>
         <div className="charts">
-            <ResponsiveContainer width="50%" aspect={2}>
+            <ResponsiveContainer width="100%" aspect={2}>
                 <LineChart data={total.data}>
                     <XAxis dataKey="name" interval={'preserveStartEnd'} />
                     <Line dataKey="total" />
@@ -20,6 +22,7 @@ const Statistics = () => {
                     <Tooltip />
                 </LineChart>
             </ResponsiveContainer>
+        </div>
         </div>
     );
 }

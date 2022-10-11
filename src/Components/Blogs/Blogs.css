@@ -1,0 +1,19 @@
+.blogs{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.blogs h1{
+    margin: 2rem;
+    text-align: center;
+    color: #030368;
+}
+.b-question .answer{
+    border: 2px solid #005f00;
+    padding: 1rem;
+    border-radius: .5rem;
+    margin: 1rem 0;
+}
+.b-question .answer h3{
+    padding: .5rem 0;
+}

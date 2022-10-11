@@ -12,13 +12,15 @@ const Questions = ({ questions }) => {
 
     const currect = (option, e) => {
         if (correctAnswer === option) {
-            eyePower()
+            ansBoot(true)
             e.setAttribute('class', 'labelText');
 
+        } else {
+            ansBoot(false)
         }
     }
-    const eyePower = () => {
-        toast(correctAnswer, {
+    const ansBoot = (props) => {
+        toast(props === true ? "Correct Answer" : "Incorrect Answer", {
             position: "top-center",
             autoClose: 5000,
             hideProgressBar: false,
@@ -28,32 +30,39 @@ const Questions = ({ questions }) => {
             progress: undefined,
             theme: "light",
         });
-    }
+}
+const eyePower = () => {
+    toast("Answer Is: " + correctAnswer, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+    });
+}
 
+return (
+    <div className='questionGroup' >
+        <ToastContainer />
 
-    return (
-        <div className='questionGroup' >
-            <ToastContainer />
+        <p>{question}</p>
+        <EyeIcon onClick={eyePower} className='eye' />
+        <div className='question'>
+            {
+                options.map(option => {
 
-            <p>{question}</p>
-            <EyeIcon onClick={eyePower} className='eye' />
-            <div className='question'>
-                {
-                    options.map(option => {
+                    return <div>
+                        <label id='singleQuestion' key={id}  onClick={(e) => currect(option, e.target)} >{option}</label>
+                    </div>
+                })
+            }
 
-                        return <div className='singleQuestion' key={id}>
-                            {/* <input type="checkbox" name="" />
-                            <label onClick={(e) => currect(option, e.target)} >{option}</label> */}
-                                <input id={'input-1'}  type="checkbox" name="" />
-                                <label htmlFor={`input-1`} onClick={(e) => currect(option, e.target)} >{option}</label>
-
-                        </div>
-                    })
-                }
-
-            </div>
         </div>
-    );
+    </div>
+);
 };
 
 export default Questions;
