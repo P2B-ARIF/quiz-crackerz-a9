@@ -1,3 +1,109 @@
-.hero-img img{
-    width: 100px;
+
+
+.dev-text{
+    text-align: center;
+    color: darkblue;
+    margin-top: 3rem;
 }
+.hero {
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 3rem auto;
+}
+.hero-img-1 {
+  margin: 0 1rem;
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 65% 100%, 0 100%);
+}
+.hero-img-1 img {
+    width: 100%;
+    object-fit: cover;
+    transition: 1s ease;
+}
+.hero-img-2 {
+  margin: 0 1rem;
+  overflow: hidden;
+  clip-path: polygon(100% 0, 100% 100%, 35% 100%, 0 65%, 0 0);
+
+}
+.hero-img-2 img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.btn1{
+    background-color: darkorange;
+    width: 170px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 16px;
+    clip-path: polygon(100% 8%, 13% 100%, 100% 100%);
+}
+.btn2{
+    background-color: darkorange;
+    width: 170px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    clip-path: polygon(87% 100%, 0 8%, 0 100%);
+}
+
+button{
+    text-align: right;
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+}
+
+.dev-text{
+    display: flex;
+    justify-content: center;
+}
+.forward{   
+    width: 40px;
+}
+
+
+
+
+
+.first{
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+}
+.second{
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.plus{
+    position: absolute;
+    bottom: 0;
+    right: 16px;
+    clip-path: polygon(43% 0, 100% 0, 100% 100%, 0 100%, 0 35%);
+}
+
+.minus{
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    clip-path: polygon(43% 0, 100% 0, 100% 100%, 0 100%, 0 35%);
+}
+
+
+
+@media (min-width: 768px) {
+
+    .hero {
+        display: flex;
+  flex-direction: row;
+
+      }
+
+ }

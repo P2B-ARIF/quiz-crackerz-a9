@@ -1,13 +1,14 @@
 import React from 'react';
+import Footer from '../Footer/Footer';
 import Hero from '../Hero/Hero';
 import QuizBank from '../QuizBank/QuizBank';
 
 const Home = () => {
     return (
         <div>
-          <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, sint.</h1>  
           <Hero/>
           <QuizBank/>
+          <Footer/>
         </div>
     );
 };

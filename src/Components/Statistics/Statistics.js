@@ -8,7 +8,7 @@ import { useLoaderData } from 'react-router-dom';
 const Statistics = () => {
 
     const total = useLoaderData()
-    console.log(total.data);
+    // console.log(total.data);
 
     return (
         <div className="charts">
