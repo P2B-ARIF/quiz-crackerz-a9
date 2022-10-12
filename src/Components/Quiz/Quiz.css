@@ -10,29 +10,61 @@
 }
 .extraWork{
 position: fixed;
-right:  3rem;
+left:  2rem;
 top:  5rem;
+z-index: 5;
 /* display: flex; */
 
 }
 .extraWork .count-plus{
   font-size: 10rem;
   font-weight: bold;
-  color: #045455;
+  color: #045455a1;
   line-height: .7;
+  line-height: .7;
+  z-index: 2;
 }
 .extraWork .count-minus{
+  position: relative;
   font-size: 10rem;
   font-weight: bold;
-  color: darkred;
+  color: rgba(139, 0, 0, 0.54);
   line-height: .7;
+  z-index: 2;
 }
 .extraWork .c-plus{
   text-align: center;
 }
+.extraWork .c-plus h1{
+  color: gray;
+}
 .extraWork .c-minus{
   text-align: center;
 }
+.extraWork .c-minus h1{
+  color: gray;
+}
+
+@media screen  and (max-width: 750px) {
+ 
+.extraWork .count-plus{
+  font-size: 6rem;
+}
+.extraWork .c-plus h1{
+  color: gray;
+  font-size: 1rem;
+}
+
+.extraWork .count-minus{
+  font-size: 6rem;
+}
+.extraWork .c-minus h1{
+  color: gray;
+  font-size: 1rem;
+}
+
+}
+
 
 /* 
 count-plus

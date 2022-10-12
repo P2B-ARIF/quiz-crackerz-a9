@@ -2,7 +2,6 @@ import './Questions.css'
 import { EyeIcon } from '@heroicons/react/24/solid';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useState } from 'react';
 
 
 
@@ -15,17 +14,11 @@ const Questions = ({ questions, extraWorksTrue , extraWorksFalse}) => {
         if (correctAnswer === option) {
             ansBoot(true)
             extraWorksTrue(true)
-
-            // setPlus(plus + 1)
             e.setAttribute('class', 'labelText');
 
         } else {
             extraWorksTrue(false)
-
-            // extraWorksFalse(false)
-
             ansBoot(false)
-            // setMinus(minus + 1)
         }
     }
     const ansBoot = (props) => {
